@@ -13,25 +13,13 @@
 
     console.log(JSON.parse(testJSON_1))//{num: 123456789123456780}  accuracy loss
 
-    var result=bigintToStr(testJSON_1,16,"");
+    var result=bigintToStr(testJSON_1);
 
     console.log(result);// {num: "123456789123456789"}
     console.log(JSON.parse(result))//{num: "123456789123456789"}  //obj
 
 
-    console.log(bigintToStr(testJSON_1,20,""));//{num:123456789123456789}  min 20
-    console.log(bigintToStr(testJSON_1,16,17));//{num:123456789123456789}  min 16 max 17
-    var testJSON_2='{"num":123456789123456789,"num2":12345678912345678912}';//
-    console.log(bigintToStr(testJSON_2,20,""));// {num:123456789123456789,num2:"12345678912345678912"}
-    var testJSON_3='{\n' +
-        '  \"num\": 123456789123456789,\n' +
-        '  \"num2\": 12345678912345678912\n' +
-        '}';//   other formats
-    console.log(bigintToStr(testJSON_3,20,""));
-    /*{
-        "num": 123456789123456789,
-        "num2": "12345678912345678912",
-      }*/
+   
 
 </script>
 </body>
